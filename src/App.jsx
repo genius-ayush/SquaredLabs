@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Empowering from "./components/Empowering";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
@@ -7,9 +8,10 @@ import Opportunities from "./components/Opportunities";
 import TrustedBy from "./components/TrustedBy";
 
 export default function App() {
+  
   return (
     <div className="text-white">
-      <Header/>
+      <Header data-aos="fade-right"/>
       <Hero/>
       <TrustedBy/>
       <Introducing/>

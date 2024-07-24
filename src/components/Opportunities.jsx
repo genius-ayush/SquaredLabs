@@ -1,10 +1,21 @@
 import React from 'react'
 import Card3 from './Card3'
-
+import{ useEffect } from "react";
+import Aos from "aos";
+import 'aos/dist/aos.css'
 function Opportunities() {
+
+  useEffect(()=>{
+    Aos.init({
+      offset: 200,
+      duration: 800,
+      easing: 'ease-in-sine',
+      delay: 200,
+    }); 
+  } , [])
   return (
 
-    <div className='mb-32 lg:h-3/4'>
+    <div className='mb-32 lg:h-3/4' data-aos = "fade-right">
       <div className='flex justify-center'>
         <div className='text-center text-4xl w-[450px] lg:mb-10'> A <span className='text-[#00B2FF]'> NEW WORLD</span> OF DEFI OPPORTUNITIES</div>
       </div>

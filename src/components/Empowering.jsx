@@ -1,9 +1,19 @@
 import React from 'react';
 import Card2 from './Card2';
-
+import{ useEffect } from "react";
+import Aos from "aos";
+import 'aos/dist/aos.css'
 function Empowering() {
+  useEffect(()=>{
+    Aos.init({
+      offset: 200,
+      duration: 800,
+      easing: 'ease-in-sine',
+      delay: 200,
+    }); 
+  } , [])
   return (
-    <div className='sm:h-full lg:h-screen flex flex-col justify-center items-center'>
+    <div className='sm:h-full lg:h-screen flex flex-col justify-center items-center' data-aos = "fade-right">
       <div className='text-center text-2xl md:text-4xl lg:w-[440px]'>
         EMPOWERING <span className='text-[#00B2FF]'>TRADERS</span> IN THE DEFI ERA
       </div>

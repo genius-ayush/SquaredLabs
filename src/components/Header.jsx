@@ -11,20 +11,20 @@ function Header() {
     <div className='w-full  h-[84px] p-[16px] flex justify-between md:mt-5'>
         <img src="assets/logo.svg" className='w-[152.56px] h-[33.03] md:w-[208px] md:h-[45.03px] lg:ml-32' alt="" />
         <div className='hidden md:flex gap-10 mt-2'>
-          <div>
+          <a href='https://frontend-web-resources.s3.amazonaws.com/SquaredLabs+-+Whitepaper+v1.0.pdf' target="_blank" className='hover:underline hover:text-gray-300'>
             Whitepaper
-          </div>
-          <div>
+          </a>
+          <a href='https://squaredlabs-io.gitbook.io/squaredlabs.io' target="_blank" className='hover:underline hover:text-gray-300'>
             Docs
-          </div>
+          </a>
         </div>
 
-        <button type="button" className= "lg:mr-32  hidden md:flex text-white bg-gradient-to-r from-blue-400 via-blue-500 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Start Trading</button>
+        <button  onClick={() => window.open("https://potentia.squaredlabs.io/", '_blank', 'noopener,noreferrer')} type="button" className= "lg:mr-32  hidden md:flex text-white bg-gradient-to-r from-blue-400 via-blue-500 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Start Trading</button>
         <img src="assets/Hamburger.svg" alt="" className='w-[59.16] h-[59.16] md:hidden sm:w-[70px] sm:h-[70px]' onClick={handleClick}/>
 
         <div
-        className={`fixed inset-0 bg-black transform transition-transform duration-300 ${
-          open ? "translate-x-0" : "-translate-y-full"
+        className={`fixed inset-0 bg-black transform transition-transform duration-300 z-50 ${
+          open ? "translate-x-0" : "translate-x-full"
         }`}
       >
         <div className="flex justify-end item-center p-3">
@@ -36,10 +36,10 @@ function Header() {
         </div>
 
         <div className="flex flex-col items-center space-y-4 mt-20 text-#6b7280">
-          <a href="#" className="font-medium font-sans  text-xl ">Docs</a>
-          <a href="#" className="font-medium font-sans  text-xl ">Blog & Research</a>
-          <a href="#" className="font-medium font-sans  text-xl ">Team</a>
-          <button type="button" className= " text-white bg-gradient-to-r from-blue-400 via-blue-500 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Start Trading</button>
+          <a href="https://squaredlabs-io.gitbook.io/squaredlabs.io" className="font-medium font-sans  text-xl ">Docs</a>
+          <a href="https://squaredlabs.io/blog" className="font-medium font-sans  text-xl ">Blog & Research</a>
+          <a href="https://squaredlabs.io/#team" className="font-medium font-sans  text-xl ">Team</a>
+          <button onClick={() => window.open("https://potentia.squaredlabs.io/", '_blank', 'noopener,noreferrer')} type="button" className= " text-white bg-gradient-to-r from-blue-400 via-blue-500 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Start Trading</button>
           
         </div>
       </div>
